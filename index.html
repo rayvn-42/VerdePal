@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VerdePal | Le site N°1 pour tout ce qui concerne les plantes</title>
+    <link rel="stylesheet" href="styles/_main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=SN+Pro:ital,wght@0,200..900;1,200..900&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <script async src="scripts/smooth_scroll.js"></script>
+</head>
+<body id="main-theme">
+    <div id="glow-item"></div>
+    <div class="toast">
+        Message
+    </div>
+    <div class="navbar">
+        <div class="elements">
+            <a href="index.html">
+                <div class="logo">
+                    <img src="resources/images/Logo_.png" alt="Logo">
+                </div>
+            </a>
+            <ul class="nav-links">    
+                <li><a href="index.html">
+                    <div class="nav-link">
+                        page d'accueil
+                    </div>
+                </a></li>
+                <li><a href="sub_pages/contact.html">
+                    <div class="nav-link">
+                        Contacte
+                    </div>
+                </a></li>
+                <li><a href="sub_pages/products.html">
+                    <div class="nav-link">
+                        Produits
+                    </div>
+                </a></li>
+                <li class="dropdown">
+                    <div class="nav-link">
+                        Compte <span class="dropdown-arrow">⌄</span>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="sub_pages/login.html">Se connecter</a>
+                        <a href="sub_pages/signup.html">S'inscrire</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="hero">
+        <div class="top">
+            <div class="text">
+                <div class="big">Cultivez votre passion pour les <span id="highlighted">plantes</span>.</div>
+                <div class="small">Découvrez une sélection soignée de plantes, pots et accessoires pour créer un espace vivant qui vous ressemble. Avec VerdePal, trouvez facilement tout ce qu’il vous faut pour choisir, entretenir et sublimer vos plantes, que vous soyez débutant ou passionné.</div>
+            </div>
+            <img src="resources/images/Hero_Plant.png" alt="Plant">
+        </div>
+        <div class="bottom">
+            <button id="shop-button" onclick="location.href='sub_pages/products.html'">Voir Produits</button>
+        </div>
+    </div>
+    <div class="footer">
+        <div><span id="copyright">© 2026 VerdePal. Tous Droits Reservé</span></div>
+    </div>
+    <script src="scripts/toast_handle.js"></script>
+    <script src="scripts/active_nav.js" defer></script>
+    <script src="scripts/typewriter.js" defer></script>
+    <script src="scripts/glow.js" defer></script>
+</body>
+</html>

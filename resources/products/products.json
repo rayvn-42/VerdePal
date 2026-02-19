@@ -1,0 +1,47 @@
+[
+    {
+        "product_name": "Une Plante",
+        "product_desc": "C'est une plante!",
+        "price": 49.99,
+        "image_url": "../resources/images/Products/Plant1.jpg",
+        "category": "1",
+        "stock": 7,
+        "in_stock": true
+    },
+    {
+        "product_name": "Une Autre Plante",
+        "product_desc": "C'est une autre plante!",
+        "price": 39.99,
+        "image_url": "../resources/images/Products/Plant2.jpg",
+        "category": "1",
+        "stock": 67,
+        "in_stock": true
+    },
+    {
+        "product_name": "Pot",
+        "product_desc": "C'est un pot!",
+        "price": 24.99,
+        "image_url": "../resources/images/Products/Pot1.jpg",
+        "category": "2",
+        "stock": 69,
+        "in_stock": true
+    },
+    {
+        "product_name": "Pot Rose",
+        "product_desc": "C'est un pot, mais rose!",
+        "price": 67.99,
+        "image_url": "../resources/images/Products/Pot2.jpg",
+        "category": "2",
+        "stock": 0,
+        "in_stock": false
+    },
+    {
+        "product_name": "Pelle pour Plantes",
+        "product_desc": "C'est une pelle pour les plantes!",
+        "price": 14.99,
+        "image_url": "../resources/images/Products/Trowel.jpg",
+        "category": "2",
+        "stock": 42,
+        "in_stock": true
+    }
+]

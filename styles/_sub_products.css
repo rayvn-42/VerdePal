@@ -1,0 +1,329 @@
+:root {
+    --dark-emerald: #26682bff;
+    --moss-green: #4eb65cff;
+    --bright-snow: #faf8f8ff;
+    --grey-snow: #faf8f8a0;
+    --dark-coffee: #381d0bff;
+    --cinnamon-wood: #ac6c45ff;
+    --orangey-yellow: #f7bc19ff;
+    --redish-orange: #f73e19ff;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    cursor: url("../resources/images/cursor.svg") 32 32, auto;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+    z-index: -10;
+}
+
+#main-theme {
+    background: var(--dark-emerald);
+}
+
+.toast {
+    font-family: 'Zalando Sans Expanded', sans-serif;
+    font-weight: 500;
+    color: var(--bright-snow);
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -150%);
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: transform 0.3s ease opacity 0.9s ease-out;
+    z-index: 10000;
+    background: var(--moss-green);
+    display: inline-block;
+}
+
+.toast-success { background: var(--moss-green); }
+.toast-error { background: var(--redish-orange); }
+.toast-warning { background: var(--orangey-yellow); }
+
+.navbar {
+    display: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--bright-snow);
+    padding: 10px 20px;
+    height: 70px;
+    width: 100%;
+    z-index: 100;
+}
+
+.elements {
+    display: flex;
+    align-items: center;
+    gap: clamp(20px, 7vw, 60px);
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    display: inline-block;
+    margin-top: -5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: clamp(15px, 3vw, 30px);
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    padding-right: 70px;
+    flex-wrap: wrap;
+}
+
+.nav-link.active {
+    color: var(--grey-snow);
+}
+
+.nav-links a {
+    text-decoration: none;
+    display: inline-block;
+    width: fit-content;
+}
+
+.nav-links li {
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: center;
+    display: inline-block;
+    margin-top: 8px;
+    transition: transform 0.3s ease-out;
+}
+
+.nav-links li:hover {
+    transform: scale(1.035);
+    cursor: pointer;
+    will-change: transform;
+}
+
+.nav-link {
+    font-family: "Zalando Sans Expanded", sans-serif;
+    font-weight: bold;
+    color: var(--bright-snow);
+
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 16px;
+}
+
+.dropdown .nav-link {
+    cursor: pointer;
+    padding-bottom: 10px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background: var(--dark-emerald);
+    border: 2px solid var(--moss-green);
+    border-radius: 8px;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    margin-top: 5px;
+    transform: translateX(15px);
+    overflow: hidden;
+}
+
+.dropdown-menu a {
+    color: var(--bright-snow);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    font-family: 'Zalando Sans Expanded', sans-serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    color: hsl(from var(--bright-snow) h s l/0.7);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.page-wrapper {
+    width: 100%;
+}
+
+.hero {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    gap: 20px;
+}
+
+.hero .hero-title {
+    font-family: 'Quicksand';
+    font-weight: lighter;
+    font-size: 2rem;
+    transform: translateY(120px);
+    color: var(--bright-snow);
+}
+
+.hero img {
+    width: 50%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+}
+
+.categories-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.category-section {
+    width: 100%;
+}
+
+.category-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    color: var(--bright-snow);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    width: 100%;
+}
+
+.product-card {
+    background: hsl(from var(--dark-emerald) h s l / 0.3);
+    border: 2px solid var(--moss-green);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--cinnamon-wood);
+    box-shadow: 0 5px 20px hsl(from var(--moss-green) h s l / 0.3);
+}
+
+.product-card img {
+    width: 25%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-family: 'Zalando Sans Expanded', sans-serif;
+    font-weight: bold;
+    color: var(--bright-snow);
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.product-card .price {
+    font-family: 'Quicksand', sans-serif;
+    color: var(--moss-green);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 40vh;
+    }
+
+    .hero img {
+        width: 70%;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .category-title {
+        font-size: 1.5rem;
+    }
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#copyright {
+    color: var(--bright-snow);
+    font-family: "SN Pro", sans-serif;
+    font-weight: lighter;
+    text-align: center;
+}
+
+#glow-item {
+    position: fixed;
+    aspect-ratio: 1 / 1;
+    width: 600px;
+    background: radial-gradient(circle, hsl(from var(--bright-snow) h s l / 0.2) 0%, hsl(from var(--bright-snow) h s l / 0.15) 20%, transparent 70%);
+    filter: blur(20px);
+    pointer-events: none;
+    z-index: 1;
+}

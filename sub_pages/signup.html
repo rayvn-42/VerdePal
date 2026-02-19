@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VerdePal | Le site N°1 pour tout ce qui concerne les plantes</title>
+    <link rel="stylesheet" href="../styles/_sub_signup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=SN+Pro:ital,wght@0,200..900;1,200..900&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <script async src="../scripts/smooth_scroll.js"></script>
+</head>
+<body id="main-theme">
+    <div id="glow-item"></div>
+    <div class="toast">
+        Message
+    </div>
+    <div class="navbar">
+        <div class="elements">
+            <a href="../index.html">
+                <div class="logo">
+                    <img src="../resources/images/Logo_.png" alt="Logo">
+                </div>
+            </a>
+            <ul class="nav-links">    
+                <li><a href="../index.html">
+                    <div class="nav-link">
+                        page d'accueil
+                    </div>
+                </a></li>
+                <li><a href="contact.html">
+                    <div class="nav-link">
+                        Contacte
+                    </div>
+                </a></li>
+                <li><a href="products.html">
+                    <div class="nav-link">
+                        Produits
+                    </div>
+                </a></li>
+                <li class="dropdown">
+                    <div class="nav-link">
+                        Compte <span class="dropdown-arrow">⌄</span>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="login.html">Se connecter</a>
+                        <a href="signup.html">S'inscrire</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="top">
+            <h2 class="header">S'inscrire</h2>
+        </div>
+        <div class="middle">
+            <div class="form">
+                <form id="info">
+                    <div>
+                        <label for="email">Address Email:</label>
+                        <input type="email" name="user_email" id="email" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="name">Mot de Passe:</label>
+                        <input type="password" name="user_pass" id="pass">
+                    </div>
+                    <br>
+                    <div>
+                        <button type="submit" id="sub-button">S'inscrire</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div><span id="copyright">© 2026 VerdePal. Tous Droits Reservé</span></div>
+    </div>
+    <script src="../scripts/toast_handle.js"></script>
+    <script src="../scripts/active_nav.js" defer></script>
+    <script src="../scripts/signup_handle.js" defer></script>
+    <script src="../scripts/glow.js" defer></script>
+</body>
+</html>
