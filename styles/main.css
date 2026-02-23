@@ -3,6 +3,7 @@
     --moss-green: #4eb65cff;
     --bright-snow: #faf8f8ff;
     --grey-snow: #faf8f8a0;
+    --charcoal: #5c5e5dff;
     --dark-coffee: #381d0bff;
     --cinnamon-wood: #ac6c45ff;
     --orangey-yellow: #f7bc19ff;
@@ -177,6 +178,103 @@ body::before {
 
 .dropdown:hover .dropdown-menu {
     display: block;
+}
+
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 150;
+}
+
+.burger-menu span {
+    display: block;
+    width: 18px;
+    height: 3px;
+    background: hsl(from var(--bright-snow) h s l/0.9);
+    border-radius: 3px;
+    transition: transform 0.3s ease, margin-left 0.3s ease;
+}
+
+.burger-menu span:nth-child(1) {
+    transform-origin: left;
+}
+
+.burger-menu span:nth-child(2) {
+    transform-origin: right;
+}
+
+.burger-menu:hover span:nth-child(1) {
+    transform: translateX(5px);
+}
+
+.burger-menu:hover span:nth-child(2) {
+    transform: translateX(-5px);
+}
+
+.burger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 1px);
+}
+
+.burger-menu.active span:nth-child(2) {
+    transform: rotate(-45deg) translate(2px, -5px);
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: hsl(from var(--charcoal) h s l / 0.5);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    z-index: 99;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+.mobile-menu a {
+    font-family: 'Zalando Sans Expanded', sans-serif;
+    font-weight: bold;
+    color: var(--bright-snow);
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.mobile-menu a:hover {
+    color: hsl(from var(--bright-snow) h s l/0.7);
+}
+
+@media (max-width: 730px) {
+    .nav-links {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
+        margin-left: auto;
+        margin-right: 50px;
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
+
+    .elements {
+        gap: 0;
+    }
 }
 
 .hero {
